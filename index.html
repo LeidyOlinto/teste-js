@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0" />
+    <title>
+        Comtrole financeiro
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <header class="cabecalho">
+
+        <div class="controle-financeiro" >
+            <!-- <div class="texto-imagem"> -->
+            <img class="logo" src="assets/img/logo1.png">
+            <div class="texto-cabecalho ">
+                Controle financeiro
+            </div>
+        </div>
+
+
+        <div class="botoes-3">
+
+            <div class="botoesdesk">
+                <!--Botões da parte desktop, eles ficam invisiveis até a tela atingir a medida da tela desktop-->
+                <div class="deskbt" id="ctdesk"><a>Cadastro de transações</a></div>
+                <span class="pipe">|</span>
+                <div class="deskbt"><a href="">Limpar dados</a></div>
+                <span class="pipe">|</span>
+                <div class="deskbt"><a href="">Configuraçoes</a></div>
+            </div>
+
+            <div class="aba">
+                <!--aba somente disponível nas partes mobile e tablet, após isso ela some pois da espaço a botões para o desktop-->
+                <div class="menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <ul>
+                        <!--Lista de clique para versões pequenas/portateis-->
+                        <li>X</li>
+                        <li>Cadastro de transações</li>
+                        <li onclick="limparDados()">Limpar dados</li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- </div> -->
+    </header>
+
+    <div class="conteudo-central ">
+
+
+        <div class="form-square">
+            <h1>Nova transacão</h1>
+            <div class="field-wrapper">
+                <div class="form-field field-small">
+                    <label>Tipo de transação</label>
+                    <select>
+                        <option>Compra</option>
+                        <option>Venda</option>
+                    </select>
+                </div>
+                <div class="form-field field-big">
+                    <label>Nome da mercadoria</label>
+                    <input type="text" placeholder="Input" />
+                </div>
+                <div class="form-field field-small">
+                    <label>Valor</label>
+                    <input type="number" placeholder="Valor" />
+                </div>
+                <div class="botao-at"></div>
+                <button>Adicionar transacão </button>
+
+            </div>
+        </div>
+        <hr class="linha-01">
+        </hr>
+
+        <div class="estrato-principal">
+            <div class="extrato-de-transacoes">
+                <p>
+                <h3>Extrato de transações</h3>
+                </p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="mercadoria-esquerda">Mercadoria</th>
+                        <th class="valor">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+ Lorem ipsum dolor sit amet consectetur </td>
+                        <td class="valor">R$ 12.999,99</td>
+                    </tr>
+                    <tr>
+                        <td>- Quis nostrud exercitation</td>
+                        <td class="valor">R$ 99,99</td>
+                    </tr>
+                    <tr>
+                        <td>+ Lorem ipsum </td>
+                        <td class="valor">R$ 9,99</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="vt" id="lc"></td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="total-esquerda">Total</td>
+                        <td class="valor-final">R$ 12.909,99 <br>[Lucro]</br></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
